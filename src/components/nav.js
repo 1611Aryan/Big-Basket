@@ -51,8 +51,8 @@ const StyledNav = styled.section`
     span {
       color: #de271c;
     }
-    padding: 1rem 2rem;
-    font-size: 2rem;
+    padding: 1rem clamp(1rem, 4vw, 2rem);
+    font-size: clamp(1.25rem, 5vw, 2rem);
     color: black;
   }
   ul {
@@ -61,12 +61,12 @@ const StyledNav = styled.section`
     justify-content: center;
     align-items: center;
     li {
-      padding: 0 2rem;
+      padding: 0 clamp(1rem, 4vw, 2rem);
       a {
         text-decoration-color: #77bc40;
 
         color: black;
-        font-size: 1.25rem;
+        font-size: clamp(0.8rem, 3vw, 1.25rem);
         font-weight: 400;
       }
     }

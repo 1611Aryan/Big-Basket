@@ -10,13 +10,11 @@ const HomeContent = ({ doorOpen }) => {
   //?Ref
   const headingRef = useRef(null);
   const homeImageRef = useRef(null);
-  const iconRef = useRef(null);
-  //?Event Handlers
+  //?Effects
   useEffect(() => {
     if (doorOpen) {
       homeImageRef.current.style.transform = "scale(1.5)";
       headingRef.current.style.transform = "scale(1.5)";
-      console.log(iconRef.current);
     } else {
       homeImageRef.current.style.transform = "scale(1)";
       headingRef.current.style.transform = "scale(1)";
@@ -69,7 +67,7 @@ const StyledHome = styled.section`
     transform: translate(-50%, -50%);
     z-index: 2;
     h1 {
-      font-size: 5rem;
+      font-size: clamp(2.5rem, 7vw, 5rem);
       color: white;
       text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
       transition: var(--transitionHeading);
@@ -82,14 +80,14 @@ const StyledHome = styled.section`
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
-    font-size: 3rem;
+    font-size: clamp(2rem, 5vw, 3rem);
     z-index: 2;
     transition: var(--transitionIcon);
     opacity: 0;
   }
   .iconVisible {
     opacity: 1;
-    font-size: 4rem;
+    font-size: clamp(3rem, 7vw, 4rem);
   }
 `;
 

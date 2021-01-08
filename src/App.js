@@ -5,6 +5,7 @@ import Home from "./pages/home";
 import Nav from "./components/nav";
 function App() {
   const [doorOpen, setDoorOpen] = useState(false);
+  //TODO Change Handles
   return (
     <div className="app">
       <GlobalStyle />

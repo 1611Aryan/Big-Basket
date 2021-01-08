@@ -5,16 +5,6 @@ import handle from "./../img/handle.png";
 const Doors = ({ doorOpen, setDoorOpen }) => {
   const leftDoorRef = useRef(null);
   const rightDoorRef = useRef(null);
-  //?
-  //   useEffect(() => {
-  //     if (doorOpen) {
-  //       leftDoorRef.current.style.transform = "rotateY(-90deg)";
-  //       rightDoorRef.current.style.transform = "rotateY(90deg)";
-  //     } else {
-  //       leftDoorRef.current.style.transform = "rotateY(0deg)";
-  //       rightDoorRef.current.style.transform = "rotateY(0deg)";
-  //     }
-  //   }, doorOpen);
   const openSeasame = () => {
     if (!doorOpen) {
       leftDoorRef.current.style.transform = "rotateY(-90deg)";
